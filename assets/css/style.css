@@ -28,6 +28,7 @@ a {
   font-size: 3.8rem;
   font-weight: 700;
   line-height: 1.27; /* 126.316% */
+  letter-spacing: -0.76px;
 }
 
 .btn {
@@ -425,6 +426,9 @@ a {
   width: 100%;
   display: flex;
   flex-shrink: 0;
+  /* Đoạn này thêm vào để lướt sang tab có hiệu ứng ease 0.5 giây */
+  /* transform: translateX(-100%);
+   transition: all ease .5s; */
 }
 
 .feedback .avatar {
@@ -482,4 +486,61 @@ a {
   font-style: italic;
   font-weight: 400;
   line-height: 1.54; /* 153.846% */
+}
+
+/* =========== Features ========== */
+
+.feature {
+  margin: 135px 0;
+  padding: 65px 0;
+}
+
+.feature .body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature .images {
+  display: flex;
+  gap: 30px;
+}
+
+.feature .images img {
+  width: 270px;
+  height: 404px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.feature .images .img-left {
+  margin-top: 34px;
+}
+
+.feature .content {
+  width: 41%;
+  /* Cách 1 */
+  /* margin: auto 0; */
+  /* Cách 2 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feature .content .desc {
+  margin: 16px 0;
+  color: #5f5b53;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.75; /* 175% */
+}
+
+.feature .content .cta-btn {
+  margin-top: 16px;
+  width: 137px;
+  height: 50px;
+  background: #ffb900;
+}
+.popular .course-item .btn-book {
+  border: none;
+  border-radius: 25px;
 }
