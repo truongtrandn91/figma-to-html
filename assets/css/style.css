@@ -416,8 +416,15 @@ a {
   padding: 96px 0;
 }
 
-.feedback-item {
+.feedback .feedback-list {
   display: flex;
+  overflow: hidden;
+}
+
+.feedback .feedback-item {
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
 }
 
 .feedback .avatar {
@@ -427,7 +434,7 @@ a {
   object-fit: cover;
 }
 
-.feedback .info .member-name {
+.feedback-item .info .member-name {
   margin-top: 18px;
   color: #f7f7f7;
   font-family: var(--font-heading);
@@ -436,7 +443,7 @@ a {
   line-height: 1.42; /* 141.667% */
 }
 
-.feedback .info .desc {
+.feedback-item .info .desc {
   margin-top: 4px;
   color: #bfbcb2;
   font-size: 1.4rem;
