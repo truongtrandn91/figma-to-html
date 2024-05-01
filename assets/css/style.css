@@ -22,13 +22,6 @@ a {
   text-decoration: none;
 }
 
-.main-content {
-  width: 1170px;
-  max-width: calc(100% - 48px); /* Lưu ý có dấu cách hai bên dấu -*/
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .heading-lv2 {
   color: #171100;
   font-family: var(--font-heading);
@@ -55,12 +48,40 @@ a {
   cursor: pointer;
 }
 
+.main-content {
+  width: 1170px;
+  max-width: calc(100% - 48px); /* Lưu ý có dấu cách hai bên dấu -*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Để đảm bảo chữ hiện vừa khung, thừa sẽ ẩn đi */
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Phần tử đồng thời có cả 2 class này mới apply */
+/* Viết liền 02 class */
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+
+/* Dùng để ngắt dòng trường hợp một từ quá dài do cố ý nhập */
+.break-all {
+  word-break: break-all;
+}
+
 /* ======================= Header ================ */
 
 .header {
   background: #fffcf4;
 }
 
+/* Phần tử đồng thời có 02 class này mới apply */
+/* Viết liền 02 class */
 .header.fixed {
   z-index: 1;
   position: sticky;
@@ -314,6 +335,7 @@ a {
 }
 
 .popular .course-item {
+  flex: 1;
   border-radius: 12px;
   border: 1px solid #e2dfda;
   background: #fff;
@@ -384,4 +406,73 @@ a {
 
 .popular .course-item .btn-book:hover {
   background: #ffb900;
+}
+
+/* ========== Feedback ========== */
+
+.feedback {
+  margin-top: 135px;
+  background: #2e2100;
+  padding: 96px 0;
+}
+
+.feedback-item {
+  display: flex;
+}
+
+.feedback .avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.feedback .info .member-name {
+  margin-top: 18px;
+  color: #f7f7f7;
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.42; /* 141.667% */
+}
+
+.feedback .info .desc {
+  margin-top: 4px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86; /* 185.714% */
+}
+
+.feedback-item .info .dots {
+  margin-top: 28px;
+  display: flex;
+  gap: 6px;
+}
+
+.feedback-item .info .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #634700;
+  cursor: pointer;
+}
+
+/* Class dot và active đồng thời mới apply */
+.feedback-item .info .dot.active {
+  background: #ffb900;
+  cursor: default; /* Đang active ko cần cursor nữa */
+}
+
+.feedback-item .content {
+  width: 66%; /* 770/1170 */
+  margin-left: auto;
+}
+
+.feedback-item blockquote {
+  color: #fff;
+  font-size: 2.6rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.54; /* 153.846% */
 }
