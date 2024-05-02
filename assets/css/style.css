@@ -488,7 +488,7 @@ a {
   line-height: 1.54; /* 153.846% */
 }
 
-/* =========== Features ========== */
+/* =========== Feature 1 ========== */
 
 .feature {
   margin: 135px 0;
@@ -543,4 +543,23 @@ a {
 .popular .course-item .btn-book {
   border: none;
   border-radius: 25px;
+}
+
+/* =========== Feature 2 ========== */
+.feature-2nd {
+  margin-top: 70px;
+}
+
+.feature-2nd .content {
+  width: 49%;
+}
+
+.feature-2nd .images img {
+  width: 470px;
+  height: 440px;
+  overflow: cover;
+}
+
+.feature-2nd .body {
+  flex-direction: row-reverse;
 }
