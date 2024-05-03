@@ -586,15 +586,21 @@ a {
   margin: 16px auto 0;
 }
 
-.blog-list {
+.blogs .blog-list {
   display: flex;
   gap: 30px;
+  overflow: hidden;
 }
 
-.blog-list .item {
-  width: 33.33%;
+.blogs .blog-list .item {
+  /* Khi có flex-shrink thì width chiếm 33.33% */
+  /* bao hàm luôn cả phần gap nên phải trừ ra 20px gap */
+  width: calc(33.33% - 20px);
+  flex-shrink: 0;
   border-radius: 1.6rem;
   background: #fff;
+  transition: all ease .5s;
+  transform: translateX(-100%);
 }
 
 .blog-list .item:hover {
@@ -660,7 +666,31 @@ a {
   margin: 12px 0 12px;
 }
 
+.blog-list .item .btn {
+  font-size: 1.4rem;
+}
+
 .blog-list .item .btn:hover {
   border-radius: 25px;
   background: #ffb900;
+}
+
+.blogs .dots {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 38px;
+  cursor: pointer;
+}
+
+.blogs .dots .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background: #5f5b53;
+}
+
+.blogs .dots .dot.active {
+  background: #ffb900;
+  cursor: default;
 }
