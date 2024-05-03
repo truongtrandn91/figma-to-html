@@ -599,7 +599,7 @@ a {
   flex-shrink: 0;
   border-radius: 1.6rem;
   background: #fff;
-  transition: all ease .5s;
+  transition: all ease 0.5s;
   transform: translateX(-100%);
 }
 
@@ -693,4 +693,88 @@ a {
 .blogs .dots .dot.active {
   background: #ffb900;
   cursor: default;
+}
+
+/* ========== Footer ========== */
+
+.footer {
+  background: #2e2100;
+  padding: 96px 135px 0;
+}
+
+.footer .row {
+  display: flex;
+  padding-bottom: 38px;
+  border-bottom: 1px solid #59554b;
+}
+
+.footer .row .column {
+  width: 21.6%;
+}
+
+.footer .row .column:first-child {
+  width: 35%;
+}
+
+.footer .desc {
+  margin-top: 18px;
+  margin-bottom: 18px;
+  max-width: 267px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86; /* 185.714% */
+}
+
+.footer .socials {
+  display: flex;
+  gap: 18px;
+}
+
+.footer .column h3 {
+  display: inline-block;
+  padding-bottom: 14px;
+  padding-right: 48px;
+}
+
+.footer .column .title {
+  border-bottom: 1px solid #59554b;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75; /* 175% */
+}
+
+.footer .column ul {
+  margin-top: 18px;
+}
+
+.footer .column .list a {
+  display: inline-block;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86; /* 185.714% */
+  margin-bottom: 12px;
+}
+
+/* Để bỏ margin bottom thừa ở cuối */
+.footer .column .list a:last-child {
+  margin-bottom: 12px;
+}
+
+.footer .column .list strong {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.86; /* 185.714% */
+}
+
+.footer .copyright {
+  color: #807d74;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86; /* 185.714% */
+  padding: 28px 0;
 }
